@@ -1,0 +1,20 @@
+
+### Feth all todos
+GET http://localhost:3000/todos
+### Fetch one todo by id
+GET http://localhost:3000/todos/b886051f-9ebc-4ded-8154-6796a72c4fa1
+### Add todo
+POST http://localhost:3000/todos
+
+{
+  "Name": "todo2"
+}
+### Update todo
+PATCH http://localhost:3000/todos/b886051f-9ebc-4ded-8154-6796a72c4fa1
+
+{
+  "Name": "todo1-updated"
+}
+
+### Delete todo by id
+DELETE http://localhost:3000/todos/355cd63f-d0e9-4103-9d36-2a676153d60e
