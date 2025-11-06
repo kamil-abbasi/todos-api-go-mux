@@ -13,16 +13,16 @@ type TodosController struct {
 	todosService TodosService
 }
 
-func NewController() (TodosController, error) {
+func NewController() TodosController {
 	service, err := NewService()
 
 	if err != nil {
-		return TodosController{}, fmt.Errorf("failed to create instance of the service, details: %v", err)
+		panic(fmt.Sprintf("failed to create instance of the service, details: %v", err))
 	}
 
 	return TodosController{
 		todosService: service,
-	}, nil
+	}
 }
 
 func (controller *TodosController) Find(w http.ResponseWriter, r *http.Request) {
