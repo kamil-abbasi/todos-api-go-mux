@@ -8,6 +8,8 @@ You need to have go installed on your system and have running mysql instance wit
 
 **Hint**: Easiest way to spin up mysql instance is by using docker. If you have it installed on your system simply run: `docker run -e MYSQL_ROOT_PASSWORD=password -d -p 3306:3306 mysql`.
 
+**Important**: After running mysql instance you must create database named `todos`. First you have to login using this command: `mysql -u root -p` (command will prompt you for password). After login you can create the database by running this command: `CREATE DATABASE todos;`.
+
 # How to run
 
 In order to run the api execute the following command (assuming you are in the repo root dir): `go build ./cmd/server/main.go` and then `go run ./cmd/server/main.go`.
